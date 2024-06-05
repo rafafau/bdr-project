@@ -28,18 +28,21 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    // baseURL: 'https://spree-multi-vendor-demo.herokuapp.com/'
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { ...devices['Desktop Chrome'], 
+      baseURL: 'https://spree-multi-vendor-demo.herokuapp.com/'},
     },
 
     // {
     //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
+    //   use: { ...devices['Desktop Firefox'],
+    //   baseURL: 'https://drugastrona.herokuapp.com/'},
     // },
 
     // {

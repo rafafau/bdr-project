@@ -7,7 +7,7 @@ export class MenuPage {
         this.page = page;
     }
     protected async goToMenu(menuLabel: string){
-        await this.page.goto('https://spree-multi-vendor-demo.herokuapp.com/');
+        await this.page.goto('/');
         await this.page.getByLabel('Show user menu').click();
         await this.page.getByRole('link', { name: menuLabel }).click();
     }
